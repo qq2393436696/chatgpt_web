@@ -8,8 +8,8 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-28T18:49:23+0800",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Red Hat, Inc.)"
+    date = "2023-06-28T11:47:22+0000",
+    comments = "version: 1.5.3.Final, compiler: Eclipse JDT (IDE) 3.22.0.v20200530-2032, environment: Java 17.0.2 (Oracle Corporation)"
 )
 public class ChatMessageConverterImpl implements ChatMessageConverter {
 
@@ -34,30 +34,30 @@ public class ChatMessageConverterImpl implements ChatMessageConverter {
 
         ChatMessageVO chatMessageVO = new ChatMessageVO();
 
-        chatMessageVO.setMessageId( chatMessageDO.getMessageId() );
-        chatMessageVO.setParentMessageId( chatMessageDO.getParentMessageId() );
-        chatMessageVO.setParentAnswerMessageId( chatMessageDO.getParentAnswerMessageId() );
-        chatMessageVO.setParentQuestionMessageId( chatMessageDO.getParentQuestionMessageId() );
-        chatMessageVO.setContextCount( chatMessageDO.getContextCount() );
-        chatMessageVO.setQuestionContextCount( chatMessageDO.getQuestionContextCount() );
-        chatMessageVO.setMessageType( chatMessageDO.getMessageType() );
-        chatMessageVO.setChatRoomId( chatMessageDO.getChatRoomId() );
-        chatMessageVO.setConversationId( chatMessageDO.getConversationId() );
         chatMessageVO.setApiType( chatMessageDO.getApiType() );
-        chatMessageVO.setIp( chatMessageDO.getIp() );
-        chatMessageVO.setContent( chatMessageDO.getContent() );
-        chatMessageVO.setResponseErrorData( chatMessageDO.getResponseErrorData() );
-        if ( chatMessageDO.getPromptTokens() != null ) {
-            chatMessageVO.setPromptTokens( chatMessageDO.getPromptTokens().longValue() );
-        }
+        chatMessageVO.setChatRoomId( chatMessageDO.getChatRoomId() );
         if ( chatMessageDO.getCompletionTokens() != null ) {
             chatMessageVO.setCompletionTokens( chatMessageDO.getCompletionTokens().longValue() );
         }
+        chatMessageVO.setContent( chatMessageDO.getContent() );
+        chatMessageVO.setContextCount( chatMessageDO.getContextCount() );
+        chatMessageVO.setConversationId( chatMessageDO.getConversationId() );
+        chatMessageVO.setCreateTime( chatMessageDO.getCreateTime() );
+        chatMessageVO.setIp( chatMessageDO.getIp() );
+        chatMessageVO.setMessageId( chatMessageDO.getMessageId() );
+        chatMessageVO.setMessageType( chatMessageDO.getMessageType() );
+        chatMessageVO.setParentAnswerMessageId( chatMessageDO.getParentAnswerMessageId() );
+        chatMessageVO.setParentMessageId( chatMessageDO.getParentMessageId() );
+        chatMessageVO.setParentQuestionMessageId( chatMessageDO.getParentQuestionMessageId() );
+        if ( chatMessageDO.getPromptTokens() != null ) {
+            chatMessageVO.setPromptTokens( chatMessageDO.getPromptTokens().longValue() );
+        }
+        chatMessageVO.setQuestionContextCount( chatMessageDO.getQuestionContextCount() );
+        chatMessageVO.setResponseErrorData( chatMessageDO.getResponseErrorData() );
+        chatMessageVO.setStatus( chatMessageDO.getStatus() );
         if ( chatMessageDO.getTotalTokens() != null ) {
             chatMessageVO.setTotalTokens( chatMessageDO.getTotalTokens().longValue() );
         }
-        chatMessageVO.setStatus( chatMessageDO.getStatus() );
-        chatMessageVO.setCreateTime( chatMessageDO.getCreateTime() );
         chatMessageVO.setUpdateTime( chatMessageDO.getUpdateTime() );
 
         return chatMessageVO;

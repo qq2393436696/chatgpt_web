@@ -8,8 +8,8 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-28T18:49:23+0800",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Red Hat, Inc.)"
+    date = "2023-06-28T11:47:23+0000",
+    comments = "version: 1.5.3.Final, compiler: Eclipse JDT (IDE) 3.22.0.v20200530-2032, environment: Java 17.0.2 (Oracle Corporation)"
 )
 public class SensitiveWordConverterImpl implements SensitiveWordConverter {
 
@@ -34,11 +34,11 @@ public class SensitiveWordConverterImpl implements SensitiveWordConverter {
 
         SensitiveWordVO sensitiveWordVO = new SensitiveWordVO();
 
-        sensitiveWordVO.setId( sensitiveWordDO.getId() );
-        sensitiveWordVO.setWord( sensitiveWordDO.getWord() );
-        sensitiveWordVO.setStatus( sensitiveWordDO.getStatus() );
         sensitiveWordVO.setCreateTime( sensitiveWordDO.getCreateTime() );
+        sensitiveWordVO.setId( sensitiveWordDO.getId() );
+        sensitiveWordVO.setStatus( sensitiveWordDO.getStatus() );
         sensitiveWordVO.setUpdateTime( sensitiveWordDO.getUpdateTime() );
+        sensitiveWordVO.setWord( sensitiveWordDO.getWord() );
 
         return sensitiveWordVO;
     }

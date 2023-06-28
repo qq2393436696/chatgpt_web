@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${MYSQL_USER_NAME:root}
-    password: ${MYSQL_PASSWORD:123456}
-    url: ${JDBC_URL:jdbc:mysql://localhost:3309/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true}
+    password: ${MYSQL_PASSWORD:root1234}
+    url: ${JDBC_URL:jdbc:mysql://localhost:3306/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true}
 
 #mybatis-plus:
 #  configuration:
@@ -12,7 +12,7 @@ spring:
 
 chat:
   # OpenAI API Key - https://platform.openai.com/account/api-keys
-  openai_api_key: ${CHAT_OPENAI_API_KEY:xxx}
+  openai_api_key: ${CHAT_OPENAI_API_KEY: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}
   # change this to an `accessToken` extracted from the ChatGPT site's `https://chat.openai.com/api/auth/session` response
   openai_access_token: ${CHAT_OPENAI_ACCESS_TOKEN:xxx}
   # OpenAI API Base URL - https://api.openai.com/，要加/后缀
