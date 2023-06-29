@@ -66,6 +66,8 @@ public class EmailServiceImpl implements EmailService {
             String sendMsgId = this.sendMessage(targetEmail, renderedTemplate);
             emailLogService.createSuccessLogBySysLog(sendMsgId, mailAccount.getFrom(), targetEmail, EmailBizTypeEnum.REGISTER_VERIFY, renderedTemplate);
         } catch (Exception e) {
+            log.info("sendForVerifyCode,targetEmail:{},verificationUrl:{}",targetEmail,verifyCode);
+            e.printStackTrace();
             // FIXME 发送失败前端仍然显示成功
             emailLogService.createFailedLogBySysLog("", mailAccount.getFrom(), targetEmail, EmailBizTypeEnum.REGISTER_VERIFY, renderedTemplate, e.getMessage());
         }
